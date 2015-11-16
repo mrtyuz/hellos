@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd"
+       >
+
+    <context:annotation-config/>
+
+    <context:component-scan base-package="com.springapp.model"/>
+
+    <!--
+        <bean id="propertyConfigurer"
+              class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"
+              p:location="classpath:/jdbc.properties"/>
+        &lt;!&ndash;<tx:annotation-driven transaction-manager="transactionManager" mode="aspectj"/>&ndash;&gt;
+        <bean id="transactionManager"
+              class="org.springframework.orm.jpa.JpaTransactionManager">
+            <property name="entityManagerFactory" ref="entityManagerFactory"/>
+        </bean>
+
+        <bean id="entityManagerFactory"
+              class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"
+              p:dataSource-ref="datasource" p:persistenceUnitName="KitapPersistent">
+            <property name="jpaVendorAdapter">
+                <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter"
+                      p:generateDdl="false"
+
+                      p:databasePlatform="${jdbc.dialect}"/>
+            </property>
+            <property name="persistenceXmlLocation" value="classpath:META-INF/persistence.xml"/>
+        </bean>-->
+
+
+    <!--<bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">-->
+    <!--<property name="sessionFactory" ref="sessionFactory"></property> </bean>-->
+    <!--<bean id="sessionFactory"-->
+    <!--class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">-->
+    <!--<property name="dataSource" ref="datasource" />-->
+    <!--<property name="annotatedClasses">-->
+    <!--<list>-->
+    <!--<value>com.ecommerce.entity.util.BaseClass</value>-->
+    <!--<value>com.ecommerce.entity.Categories</value>-->
+    <!--<value>com.ecommerce.entity.Users</value>-->
+    <!--<value>com.ecommerce.entity.Urunler</value>-->
+    <!--</list>-->
+    <!--</property>-->
+    <!--<property name="hibernateProperties">-->
+    <!--<props>-->
+    <!--<prop key="hibernate.dialect">${jdbc.dialect}</prop>-->
+    <!--<prop key="hbm2ddl.auto">update</prop>-->
+    <!--<prop key="hibernate.show_sql">true</prop>-->
+    <!--</props>-->
+    <!--</property>-->
+    <!--</bean>-->
+
+
+    <!--<bean id="datasource"-->
+    <!--class="com.mchange.v2.c3p0.ComboPooledDataSource"-->
+    <!--p:driverClass="${jdbc.driverClassName}"-->
+    <!--p:jdbcUrl="${jdbc.databaseurl}"-->
+    <!--p:user="${jdbc.username}"-->
+    <!--p:password="${jdbc.password}"-->
+    <!--/>-->
+
+
+    <!--<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">-->
+    <!--<property name="host" value="tksmtp.secure.toyotatr.com"/>-->
+    <!--</bean>-->
+
+    <!--<bean id="infoMailTemplate" class="org.springframework.mail.SimpleMailMessage">-->
+    <!--<property name="from" value="rds@toyotatr.com"/>-->
+    <!--<property name="subject" value="RDS Auto Mail"/>-->
+    <!--</bean>-->
+
+</beans>
